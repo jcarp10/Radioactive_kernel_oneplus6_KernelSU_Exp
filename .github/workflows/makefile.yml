@@ -1,4 +1,6 @@
-name: Makefile CI
+configure
+
+    - nMakefile CI
 
 on:
   push:
@@ -14,10 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: configure
-      run: ./configure
-
-    - name: Install dependencies
+- name: Install dependencies
       run: make
 
     - name: Run check
